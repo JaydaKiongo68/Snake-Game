@@ -3,7 +3,7 @@ import random
 
 #gamesettings
 GAME_WIDTH = 700
-GAME_HIGHT = 700
+GAME_HEIGHT = 700
 SPEED = 50
 BODY_PARTS = 3
 SNAKE_COLOR = '#00FF00'
@@ -33,3 +33,22 @@ class Food:
         self.coordinates = [x,y]
 
         canvas.create_oval(x,y,x+SPACE_SIZE,y+SPACE_SIZE,fill=FOOD_COLOR,tag='food')
+
+#Game Window Set-Up
+score = 0
+direction = "down"
+
+window = Tk()
+window.title("Snake Game")
+window.resizeable(False, False)
+
+label = Label(window, text='score: {}'.format(score), font=('consolas', 40))
+label.pack()
+
+canvas = Canvas(
+    window,
+    bg=BACKROUND_COLOR,
+    height=GAME_HEIGHT,
+    width=GAME_WIDTH
+)
+canvas.pack()
