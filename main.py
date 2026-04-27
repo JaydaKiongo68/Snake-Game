@@ -87,7 +87,15 @@ def next_turn(snake, food):
         label.config(text='Score: {}'.format(score))
         canvas.delete('food')
         food = Food()
-        
+    else:
+        del snake.coordinates[-1]
+        canvas.delete(snake.squares[-1])
+        del snake.squares[-1]
+
+    if check_collisions(snake):
+        game_over()
+    else:
+        window.after(SPEED, next_turn, snake, food)
 
 
 
