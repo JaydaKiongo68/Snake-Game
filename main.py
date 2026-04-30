@@ -2,8 +2,8 @@ from tkinter import *
 import random
 
 #gamesettings
-GAME_WIDTH = 700
-GAME_HEIGHT = 700
+GAME_WIDTH = 1000
+GAME_HEIGHT = 1000
 SPEED = 70
 BODY_PARTS = 3
 SNAKE_COLOR = '#00FF00'
