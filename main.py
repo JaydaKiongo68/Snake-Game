@@ -4,7 +4,7 @@ import random
 #gamesettings
 GAME_WIDTH = 700
 GAME_HEIGHT = 700
-SPEED = 50
+SPEED = 70
 BODY_PARTS = 3
 SNAKE_COLOR = '#00FF00'
 FOOD_COLOR = '#FF0000'
@@ -40,7 +40,7 @@ direction = "down"
 
 window = Tk()
 window.title("Snake Game")
-window.resizeable(False, False)
+window.resizable(False, False)
 
 label = Label(window, text='score: {}'.format(score), font=('consolas', 40))
 label.pack()
